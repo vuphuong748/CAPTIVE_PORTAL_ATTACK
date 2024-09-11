@@ -45,9 +45,6 @@ Esp8266 deauther with captive portal and update GUI. Web version is supported
 - Không đăng nhập trực tiếp tài khoản mật khẩu mạng xã hội do liên kết dẫn đến.
 - Tên WiFi giống với tên chính và không có mật khẩu thì KHÔNG NÊN VÀO.
 
-## Liên hệ
-- facebook: [Do Hoang Minh](https://www.facebook.com/dohoang.minh.90)
-
 ## Tham khảo
 Tham khảo chính là ở đây [esp8266_deauther của SpacehuhnTech](https://github.com/SpacehuhnTech/esp8266_deauther)
 
